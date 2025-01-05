@@ -1,0 +1,165 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #333;
+}
+
+nav {
+    gap: 3px;
+    padding: 20px;
+    background-color: #424242;
+    margin-bottom: 10px;
+    justify-content: space-around;
+}
+
+.heading {
+    color: rgb(178, 178, 178);
+    font-weight: 700;
+    padding: 5px;
+}
+
+.label{
+    color: white;
+    font-weight: 500;
+}
+
+.see {
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.mid {
+    justify-content: space-around;
+    margin-top: 90px;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.flex{
+    display: flex;
+    gap: 3px;
+}
+
+button{
+    border: none;
+    outline: none;
+    color: #424242;
+    font-weight: 600;
+    background-color: rgb(255, 209, 57);
+    border-radius: 6px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.info{
+    color: white;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+img{
+    cursor:pointer;
+}
+
+.letter.correct{
+    color:rgb(255, 209, 57);
+}
+
+.letter.incorrect{
+    color: rgb(255, 59, 59);
+}
+
+.cursor {
+    background-color: white;
+    height: 24px;
+    width: 2px;
+    position: fixed;
+    animation: blink 0.7s infinite;
+    top: 278px;
+    left: 372px;
+}
+
+.gameArea {
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    height: 121px;
+    position: relative;
+    border-radius: 10px;
+    margin: 53px auto;
+    overflow: hidden;
+}
+
+.words {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 20px 40px;
+    color: #7b7b7b;
+    font-size: 1.6rem;
+    line-height: 35px;
+    overflow: hidden;
+    filter: blur(3px);
+}
+
+.gameArea:focus .words {
+    filter: blur(0px);
+}
+
+.gameArea:focus .focus {
+    display: none;
+}
+
+.focus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+}
+
+.word {
+    color: rgb(147, 147, 147);
+    display: inline-block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0 6px;
+    font-weight: 543;
+}
+
+.letter {
+    display: inline-block;
+}
+
+.extra{
+    opacity: 0.6;
+}
+
+.gameArea:focus .cursor{
+    display: block;
+}
+.gameArea.over .words{
+    opacity: .5;
+    filter: blur(0px);
+}
+.gameArea.over:focus .cursor{
+    display:none !important;
+}
+.gameArea.over .focus {
+    display: none;
+}

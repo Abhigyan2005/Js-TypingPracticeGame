@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PenguinType</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+</head>
+<body>
+    <nav class="flex">
+      <div class="flex">
+        <img style="width: 50px;" src="/svgs/penguinLogo.svg" alt="">
+        <h1 class="heading">
+            <div class="see">Penguin See</div>
+            PenguinType
+        </h1>
+      </div>
+
+      <div>
+        <div class="label">Select Time: </div>
+        <button class="timerinfo">15</button>
+        <button class="timerinfo">30</button>
+        <button class="timerinfo">60</button>
+      </div>
+    </nav>
+
+    <div class="mid flex">
+        <div class="info"></div>
+        <div class="new">
+            <button onclick="InsertWords()">New Game</button>
+        </div>
+    </div>
+    
+    <div class="gameArea flex" tabindex="0">
+        <div class="words"></div>
+        <div class="cursor"></div>
+        <div class="focus">Click Here to Start</div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
